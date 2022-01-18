@@ -17,3 +17,36 @@ int main(){
 	
 	return 0;
 }
+
+
+
+void shuffle(int& a,int& b,int& c,int& d){
+	int temp = 0;
+	if(rand()%4 == 0)
+	{
+    	temp = a;
+    	a = b;
+     	b=temp;
+	}
+	
+	else if (rand()%4 == 1)
+	{
+		temp = b;
+		b = c;
+		c=temp;
+	}
+	
+	else if (rand()%4 == 2)
+	{
+		temp = c;
+		c = d;
+		d=temp;
+	}
+	
+	else if(rand()%4 == 3)
+	{
+		temp = d;
+		d = a;
+		a=temp;
+	}
+}
